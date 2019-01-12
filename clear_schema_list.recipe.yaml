@@ -1,0 +1,11 @@
+# encoding: utf-8
+---
+recipe:
+  Rx: clear_schema_list
+  description: >-
+    Clear schema list so you can build a new list of schemas from scratch.
+
+patch_files:
+  default.custom.yaml:
+    - patch/+:
+        schema_list: []

@@ -1,0 +1,19 @@
+# encoding: utf-8
+---
+recipe:
+  Rx: set
+  args:
+    - config=default
+    - key
+    - value=true
+  description: >-
+    Set a key-value pair in a configuration file.
+    Note:
+    only scalar values (string, number, boolean) are supported.
+    avoid using special characters like '~' in strings;
+    when not working correctly or unsure, resort to writing a YAML patch file.
+
+patch_files:
+  ${config%.schema}.custom.yaml:
+    - patch/+:
+        ${key:-_}: ${value:-true}
