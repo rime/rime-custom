@@ -8,7 +8,7 @@
 
 ## 添加輸入方案到方案選單
 
-參數化配方： ℞ **custom:add**
+參數化配方： ℞ **custom:add:schema=...**
 
 示例：
 
@@ -28,7 +28,7 @@ bash rime-install custom:add:schema=${schema}
 
 ## 設定單項配置
 
-參數化配方： ℞ **custom:set**
+參數化配方： ℞ **custom:set:config=...,key=...,value=...**
 
 示例：
 
