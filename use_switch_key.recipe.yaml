@@ -1,0 +1,22 @@
+# Rime recipe
+
+recipe:
+  Rx: use_switch_key
+  args:
+    - shift=commit_code
+    - control=noop
+    - caps=clear
+    - lock=true
+  description: >-
+    Set switch key behavior.
+
+patch_files:
+  default.custom.yaml:
+    - patch/+:
+        ascii_composer/good_old_caps_lock: ${lock:-true}
+        ascii_composer/switch_key/+/+:
+          Shift_L: ${shift:-commit_code}
+          Shift_R: ${shift:-commit_code}
+          Control_L: ${control:-noop}
+          Control_R: ${control:-noop}
+          Caps_Lock: ${caps:-clear}

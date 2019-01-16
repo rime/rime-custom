@@ -1,0 +1,18 @@
+# Rime recipe
+
+recipe:
+  Rx: use_key_bindings
+  args:
+    - feature
+  description: >-
+    use key binding feature defined in key_bindings.yaml
+
+install_files: >-
+  # key_bindings.yaml
+
+patch_files:
+  default.custom.yaml:
+    - patch/+:
+        key_binder/bindings/+/+:
+          __patch:
+            - key_bindings:/${feature:-_}
