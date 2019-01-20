@@ -1,6 +1,6 @@
 # rime-custom
 
-[Rime](http://rime.im) 輸入法自定義配置
+[Rime](https://rime.im) 輸入法自定義配置
 
 授權條款：見 [LICENSE](LICENSE)
 
