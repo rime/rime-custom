@@ -10,5 +10,5 @@ recipe:
 patch_files:
   default.custom.yaml:
     - patch/+:
-        schema_list/+/+:
+        schema_list/+:
           - schema: ${schema:-luna_pinyin}
